@@ -6,6 +6,9 @@ description: 'Ma Custom theme Test'
 package: Custom
 core: 8.x
 
+libraries:
+  - bartik/global-styling
+
 regions:
   header: Header
   primary_menu: 'Primary menu'
