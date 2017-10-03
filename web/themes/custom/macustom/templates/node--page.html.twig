@@ -98,7 +98,15 @@
     {% endif %}
   </header>
 
-  <div class="test-message">
+  <div class="dumpster">
+    {{ kint(user) }}
+    {% if not user.isAnonymous %}
+    <div class="printout" style="background: #000; color:#f00;"> NOT ANONYMOUS <br />
+    {{ author_name }}</div>
+    {% endif %}
+  </div>
+
+  <div class="test-message" style="background: #f90; color: #fff;">
   {% if view_mode == 'full' %}
     {% trans %}
     Report any problems with this page to ADMIN
