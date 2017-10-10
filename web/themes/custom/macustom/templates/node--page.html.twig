@@ -99,10 +99,10 @@
   </header>
 
   <div class="dumpster">
-    {{ kint(user) }}
+    {{ kint() }}
     {% if not user.isAnonymous %}
-    <div class="printout" style="background: #000; color:#f00;"> NOT ANONYMOUS <br />
-    {{ author_name }}</div>
+    <div class="printout" style="background: #000; color:#f00;">{{ author_name }} NOT ANONYMOUS <br />
+    </div>
     {% endif %}
   </div>
 
@@ -114,12 +114,9 @@
   {% endif %}
   </div>
 
-  <pre>
-  <div class="twig-dump" style="background: #fff;">
-    {{ dump(_context|keys) }}
-    {{ dump(theme_hook_original) }}
+  <div class="output_custom_var">
+    {{ custom_var }}
   </div>
-    </pre>
 
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
     {{ content }}

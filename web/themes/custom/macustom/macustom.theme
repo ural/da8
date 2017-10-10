@@ -1,2 +1,11 @@
 <?php
 
+function macustom_preprocess_node(&$variables) {
+  $variables['custom_var'] = 'MY CUSTOM VARIABLE';
+
+
+/*  if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
+    $variables['label']['#wassever'] = ' [you are the author]';
+  }*/
+
+}
