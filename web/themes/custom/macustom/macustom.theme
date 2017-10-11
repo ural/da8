@@ -4,8 +4,24 @@ function macustom_preprocess_node(&$variables) {
   $variables['custom_var'] = 'MY CUSTOM VARIABLE';
 
 
-/*  if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
+  if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
     $variables['label']['#wassever'] = ' [you are the author]';
-  }*/
+  }
 
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function macustom_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node) {
+    // You can get nid and anything else you need from the node object.
+    $nid = $node->id();
+
+    if($nid == 4) {
+      $suggestions[] = 'field__' . 'macustom_title_nid_4';
+    }
+  }
 }

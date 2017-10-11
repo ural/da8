@@ -99,7 +99,11 @@
   </header>
 
   <div class="dumpster">
-    {{ kint() }}
+    {{ kint(node.id) }}
+    <h1>
+      {{ label }}
+    </h1>
+
     {% if not user.isAnonymous %}
     <div class="printout" style="background: #000; color:#f00;">{{ author_name }} NOT ANONYMOUS <br />
     </div>
