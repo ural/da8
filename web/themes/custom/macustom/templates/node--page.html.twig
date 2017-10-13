@@ -99,9 +99,12 @@
   </header>
 
   <div class="dumpster">
-    {{ kint(node.id) }}
+    {{ kint() }}
     <h1 style="color: #fff;">
-      {{ label }}
+      {{ label['#wassever'] }}<br>
+      {{ node.getCreatedTime() }}<br>
+      {{ date }}<br>
+      {{ attribute(label, '#wassever') }} {# We recommend square brackets and not the attribute function for referencing array keys containing special characters #}
     </h1>
 
     {% if not user.isAnonymous %}
@@ -109,6 +112,15 @@
     </div>
     {% endif %}
   </div>
+
+    <div class="var-printout" style="background: #09f; color: #000;">
+      <h2>cached contexts</h2>
+      <ul>
+        {% for caches in elements['#cache'].contexts %}
+          <li>{{ loop.index }} : {{ caches }}</li>
+        {% endfor %}
+      </ul>
+    </div>
 
   <div class="test-message" style="background: #f90; color: #fff;">
   {% if view_mode == 'full' %}
