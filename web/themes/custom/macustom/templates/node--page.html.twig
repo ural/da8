@@ -122,6 +122,11 @@
     {{ custom_var }}
   </div>
 
+  <div class="twig-date" style="color: #f00;">
+    {{ post.published_at|date("F jS \\a\\t g:ia") }}<br />
+    {{ 'now'|date("m/d/Y") }}
+  </div>
+
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
     {{ content }}
   </div>
