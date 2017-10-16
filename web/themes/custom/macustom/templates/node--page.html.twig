@@ -98,6 +98,10 @@
     {% endif %}
   </header>
 
+  <div class="url-test">
+    <a href="{{ url('view.frontpage.page_1') }}">{{ 'View front page'|t }}</a>
+  </div>
+
   <div class="dumpster">
     {{ kint() }}
     <h1 style="color: #fff;">
@@ -116,9 +120,9 @@
     <div class="var-printout" style="background: #09f; color: #000;">
       <h2>cached contexts</h2>
       <ul>
-        {% for caches in elements['#cache'].contexts %}
+        {%- for caches in elements['#cache'].contexts -%}
           <li>{{ loop.index }} : {{ caches }}</li>
-        {% endfor %}
+        {%- endfor -%}
       </ul>
     </div>
 
@@ -135,8 +139,22 @@
   </div>
 
   <div class="twig-date" style="color: #f00;">
-    {{ post.published_at|date("F jS \\a\\t g:ia") }}<br />
+    {% filter upper %}
+    {{ post.published_at|date("F jS \\a\\t g:ia") }}
+    {% endfilter %}<br />
     {{ 'now'|date("m/d/Y") }}
+  </div>
+
+  <div class="emily">
+  {{ link('Emily', 'http://www.lebook.com/sites/default/files/styles/showcase_image_large/public/creative/emily-didonato-by-paola-kudacki-for-vamp-magazine-1-spring-summer-2014-1.jpg?itok=lE8wUVcD', {'class':['external'], 'role': ['link'], 'target':['_blank']}) }}
+  </div>
+
+  <div class="trans-example" style="color: greenyellow;">
+    {% spaceless %}
+      {% trans %}
+      Hello {{ user.account.name }}, today's date is {{ date|placeholder|upper }}.
+      {% endtrans %}
+    {% endspaceless %}
   </div>
 
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
