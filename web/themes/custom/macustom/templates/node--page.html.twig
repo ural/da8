@@ -77,7 +77,7 @@
     'clearfix',
   ]
 %}
-{{ attach_library('classy/node') }}
+{#{{ attach_library('classy/node') }}#}
 <article{{ attributes.addClass(classes) }}>
   <header>
     {{ title_prefix }}
@@ -134,8 +134,12 @@
   {% endif %}
   </div>
 
-  <div class="output_custom_var">
-    {{ custom_var }}
+  <div class="output_custom_var" style="background: #fff6bf;">
+    {{ custom_var }}<br>
+  </div>
+
+  <div class="rout-test">
+    <a href="{{ path('entity.node.canonical', {'node': '3'}) }}">ROUT TEST</a>
   </div>
 
   <div class="twig-date" style="color: #f00;">
@@ -144,20 +148,28 @@
     {% endfilter %}<br />
     {{ 'now'|date("m/d/Y") }}
   </div>
-
-  <div class="emily">
+ {# SET CUSTOM ATTRIBUTE    #}
+  {% set my_attribute = create_attribute() %}
+  {%
+  set emily_classes = [
+    'emily-class',
+    'my_emily-class',
+  ]
+  %}
+  <div {{ my_attribute.addClass(emily_classes).setAttribute('id', 'Emily') }}>
   {{ link('Emily', 'http://www.lebook.com/sites/default/files/styles/showcase_image_large/public/creative/emily-didonato-by-paola-kudacki-for-vamp-magazine-1-spring-summer-2014-1.jpg?itok=lE8wUVcD', {'class':['external'], 'role': ['link'], 'target':['_blank']}) }}
   </div>
 
   <div class="trans-example" style="color: greenyellow;">
     {% spaceless %}
       {% trans %}
-      Hello {{ user.account.name }}, today's date is {{ date|placeholder|upper }}.
+      Hello {{ user.account.name|upper }}, today's date is
       {% endtrans %}
+      {{ 'now'|date("F jS \\a\\t g:ia")|upper }}.
     {% endspaceless %}
   </div>
 
-  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+  <div{{ content_attributes.addClass('node__content', 'clearfix') }} {{ content_attributes.removeAttribute('id') }}>
     {{ content }}
   </div>
 </article>
