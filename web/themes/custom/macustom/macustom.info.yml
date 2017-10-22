@@ -1,13 +1,15 @@
 # THEMENAME.info.yml file for MaCustom theme
 name: Ma Custom
 type: theme
-base theme: bartik
 description: 'Ma Custom theme Test'
 package: Custom
 core: 8.x
 
 libraries:
   - bartik/global-styling
+  - macustom/global-styling
+
+base theme: bartik
 
 regions:
   header: Header

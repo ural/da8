@@ -25,3 +25,13 @@ function macustom_theme_suggestions_field_alter(array &$suggestions, array $vari
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_page() for PAGE document templates.
+ */
+/*function macustom_preprocess_page(&$variables) {
+  if ($variables['is_front'] == TRUE) {
+    $variables['#attached']['library'][] = 'macustom/macustom';
+  }
+}*/
+

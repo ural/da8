@@ -1,0 +1,18 @@
+---
+
+global-styling:
+  version: 1.0
+  css:
+    theme:
+      css/theme.css {}
+    base:
+      css/base.css {}
+    components:
+      css/components.css {}
+  js:
+    js/scripts.js {}
+
+  dependencies:
+    - core/jquery
+
+...
