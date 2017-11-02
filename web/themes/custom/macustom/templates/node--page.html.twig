@@ -103,7 +103,7 @@
   </div>
 
   <div class="dumpster">
-    {{ kint() }}
+    {{ kint(label) }}
     <h1 style="color: blue;">
       {{ label['#wassever'] }}<br>
       {{ node.getCreatedTime() }}<br>
@@ -157,10 +157,10 @@
   ]
   %}
   <div {{ my_attribute.addClass(emily_classes).setAttribute('id', 'Emily') }}>
-  {{ link('Emily', 'http://www.lebook.com/sites/default/files/styles/showcase_image_large/public/creative/emily-didonato-by-paola-kudacki-for-vamp-magazine-1-spring-summer-2014-1.jpg?itok=lE8wUVcD', {'class':['external'], 'role': ['link'], 'target':['_blank']}) }}
+  {{ link('EMILY DIDONATO', 'http://www.lebook.com/sites/default/files/styles/showcase_image_large/public/creative/emily-didonato-by-paola-kudacki-for-vamp-magazine-1-spring-summer-2014-1.jpg?itok=lE8wUVcD', {'class':['external'], 'role': ['link'], 'target':['_blank']}) }}
   </div>
 
-  <div class="trans-example" style="color: greenyellow;">
+  <div class="trans-example" style="color: #0a6a25;">
     {% spaceless %}
       {% trans %}
       Hello {{ user.account.name|upper }}, today's date is

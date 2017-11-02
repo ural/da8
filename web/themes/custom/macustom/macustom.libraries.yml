@@ -1,18 +1,24 @@
----
-
 global-styling:
-  version: 1.0
+  version: 1.x
   css:
     theme:
-      css/theme.css {}
-    base:
-      css/base.css {}
-    components:
-      css/components.css {}
+      css/base.css: {}
+      css/component.css: {}
+      css/layout.css: {}
+      css/state.css: {}
+      css/theme.css: {}
   js:
-    js/scripts.js {}
+    js/scripts.js: {}
+    js/emoji.js: {}
 
   dependencies:
     - core/jquery
+    - core/modernizr
 
-...
+friendly-greeting:
+  version: 1.0
+  license: GPL
+  js:
+    js/friendly-greeting.js: { }
+  dependencies:
+    - core/drupalSettings
