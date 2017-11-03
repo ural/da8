@@ -7,14 +7,14 @@ macustom.layout.mobile:
   group: Macustom Breaks
 macustom.layout.narrow:
   label: narrow
-  mediaQuery: 'all and (min-width: 560px) and (max-width: 850px)'
-  weight: 1
+  mediaQuery: 'all and (min-width: 768px) and (max-width: 1024px)'
+  weight: 11
   multipliers:
     - 1x
   group: Macustom Breaks
 macustom.layout.wide:
   label: wide
-  mediaQuery: 'all and (min-width: 851px)'
+  mediaQuery: 'all and (min-width: 1025px)'
   weight: 2
   multipliers:
     - 1x
