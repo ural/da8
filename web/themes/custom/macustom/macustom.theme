@@ -3,11 +3,9 @@
 function macustom_preprocess_node(&$variables) {
   $variables['custom_var'] = 'MY CUSTOM VARIABLE';
 
-
   if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
     $variables['label']['#wassever'] = ' [you are the author]';
   }
-
 }
 
 /**
@@ -16,12 +14,36 @@ function macustom_preprocess_node(&$variables) {
 function macustom_theme_suggestions_field_alter(array &$suggestions, array $variables) {
 
   $node = \Drupal::routeMatch()->getParameter('node');
+
   if ($node) {
     // You can get nid and anything else you need from the node object.
     $nid = $node->id();
-
     if($nid == 4) {
       $suggestions[] = 'field__' . 'macustom_title_nid_4';
     }
   }
 }
+
+/**
+ * Implements hook_page_attachments_alter
+ */
+
+function macustom_page_attachments_alter(array &$page) {
+  $account = \Drupal::currentUser();
+  if($account->isAuthenticated()) {
+    $page['#attached']['library'][] = 'macustom/friendly-greeting';
+    // Then we pass along our dynamic value.
+    // This will then be available in our JavaScript as drupalSettings.friendly.name.
+    $page['#attached']['drupalSettings']['friendly']['name'] = $account->getDisplayName();
+  }
+}
+
+/*function macustom_page_attachments_alter(array &$page) {
+  // Get the current path.
+  $path = $current_path = \Drupal::service('path.current')->getPath();
+  // If we're on the node listing page, add our retro library.
+  if ($path == '/node') {
+    $page['#attached']['library'][] = 'macustom/global-styling';
+  }
+}*/
+

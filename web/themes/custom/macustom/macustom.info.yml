@@ -1,13 +1,22 @@
 # THEMENAME.info.yml file for MaCustom theme
 name: Ma Custom
 type: theme
-base theme: bartik
 description: 'Ma Custom theme Test'
 package: Custom
 core: 8.x
 
 libraries:
   - bartik/global-styling
+  - macustom/global-styling
+  - macustom/friendly-greeting
+
+libraries-override:
+    # Replace the core modernizr library with our custom build.
+  core/modernizr:
+    js:
+      assets/vendor/modernizr/modernizr.min.js: js/modernizr-custom.js
+
+base theme: bartik
 
 regions:
   header: Header
