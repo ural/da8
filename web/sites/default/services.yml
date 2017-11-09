@@ -57,7 +57,7 @@ parameters:
     # @default false
     # debug: false
     #
-    debug: true
+    debug: false
     #
     # Twig auto-reload:
     #
