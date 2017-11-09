@@ -98,8 +98,78 @@
     {% endif %}
   </header>
 
+  <div class="url-test">
+    <a href="{{ url('view.frontpage.page_1') }}">{{ 'View front page'|t }}</a>
+  </div>
+
+  <div class="dumpster">
+    {{ kint(elements['#theme']) }}
+    <h1 style="color: blue;">
+      {{ label['#wassever'] }}<br>
+      {{ node.getCreatedTime() }}<br>
+      {{ date }}<br>
+      {{ attribute(label, '#wassever') }} {# We recommend square brackets and not the attribute function for referencing array keys containing special characters #}
+    </h1>
+
+    {% if not user.isAnonymous %}
+    <div class="printout" style="background: #000; color:#f00;">{{ author_name }} IS NOT ANONYMOUS <br />
+    </div>
+    {% endif %}
+  </div>
+
+    <div class="var-printout" style="background: #09f; color: #000;">
+      <h2>cached contexts</h2>
+      <ul>
+        {%- for caches in elements['#cache'].contexts -%}
+          <li>{{ loop.index }} : {{ caches }}</li>
+        {%- endfor -%}
+      </ul>
+    </div>
+
+  <div class="test-message" style="background: #f90; color: #fff;">
+  {% if view_mode == 'full' %}
+    {% trans %}
+    Report any problems with this page to ADMIN
+    {% endtrans %}
+  {% endif %}
+  </div>
+
+  <div class="output_custom_var" style="background: #fff6bf;">
+    {{ custom_var }}<br>
+  </div>
+
+  <div class="rout-test">
+    <a href="{{ path('entity.node.canonical', {'node': '3'}) }}">ROUT TEST</a>
+  </div>
+
+  <div class="twig-date" style="color: #f00;">
+    {% filter upper %}
+    {{ post.published_at|date("F jS \\a\\t g:ia") }}
+    {% endfilter %}<br />
+    {{ 'now'|date("m/d/Y") }}
+  </div>
+ {# SET CUSTOM ATTRIBUTE    #}
+  {% set my_attribute = create_attribute() %}
+  {%
+  set emily_classes = [
+    'emily-class',
+    'my_emily-class',
+  ]
+  %}
+  <div {{ my_attribute.addClass(emily_classes).setAttribute('id', 'Emily') }}>
+  {{ link('EMILY DIDONATO', 'http://www.lebook.com/sites/default/files/styles/showcase_image_large/public/creative/emily-didonato-by-paola-kudacki-for-vamp-magazine-1-spring-summer-2014-1.jpg?itok=lE8wUVcD', {'class':['external'], 'role': ['link'], 'target':['_blank']}) }}
+  </div>
+
+  <div class="trans-example" style="color: #0a6a25;">
+    {% spaceless %}
+      {% trans %}
+      Hello {{ user.account.name|upper }}, today's date is
+      {% endtrans %}
+      {{ 'now'|date("F jS \\a\\t g:ia")|upper }}.
+    {% endspaceless %}
+  </div>
+
   <div{{ content_attributes.addClass('node__content', 'clearfix') }} {{ content_attributes.removeAttribute('id') }}>
     {{ content }}
   </div>
 </article>
-
