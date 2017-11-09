@@ -55,9 +55,9 @@ parameters:
     #
     # Not recommended in production environments
     # @default false
-    # debug: false
+    debug: false
     #
-    debug: true
+    # debug: true
     #
     # Twig auto-reload:
     #
