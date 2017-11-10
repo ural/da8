@@ -1,0 +1,22 @@
+uuid: eafddb86-95cb-4774-9c27-d737518bb006
+langcode: en
+status: true
+dependencies:
+  theme:
+    - macustom
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: macustom_local_tasks
+theme: macustom
+region: content
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

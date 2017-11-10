@@ -1,0 +1,28 @@
+uuid: 7108f119-6b03-498e-bc7b-dabc6c6f5709
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.twiggy_page.body
+    - node.type.twiggy_page
+  module:
+    - text
+    - user
+id: node.twiggy_page.teaser
+targetEntityType: node
+bundle: twiggy_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

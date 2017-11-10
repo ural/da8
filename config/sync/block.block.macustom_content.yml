@@ -1,0 +1,22 @@
+uuid: a33d9be4-1b1c-4d99-95c1-63d2965a74aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - macustom
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: macustom_content
+theme: macustom
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

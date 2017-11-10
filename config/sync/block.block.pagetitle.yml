@@ -1,0 +1,18 @@
+uuid: 72b9dc27-1e43-4d65-a30a-6dd6eb644479
+langcode: en
+status: true
+dependencies:
+  theme:
+    - macustom
+id: pagetitle
+theme: macustom
+region: just_test_region
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

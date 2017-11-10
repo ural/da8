@@ -1,0 +1,22 @@
+uuid: 18a269b4-7b83-41b5-8130-5cffd61b2779
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.twiggy_page
+  module:
+    - text
+id: node.twiggy_page.body
+field_name: body
+entity_type: node
+bundle: twiggy_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
