@@ -54,4 +54,14 @@ class TranscodeProfile extends ConfigEntityBase implements TranscodeProfileInter
    */
   protected $label;
 
+  /**
+   * Codec
+   *
+   * @var string
+   */
+  protected $codec;
+  public function getCodec() {
+    return $this->codec;
+  }
+
 }
