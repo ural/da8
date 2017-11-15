@@ -1,0 +1,15 @@
+uuid: 677f17b0-820e-4d7c-ab4a-fd93a633a115
+langcode: en
+status: true
+dependencies: {  }
+name: banner_1200w
+label: 'Banner 1200w'
+effects:
+  f1c383fe-832c-47e7-bf57-1ab1bb1a40fd:
+    uuid: f1c383fe-832c-47e7-bf57-1ab1bb1a40fd
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: null
+      upscale: false

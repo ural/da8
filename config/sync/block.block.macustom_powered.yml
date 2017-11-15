@@ -1,0 +1,22 @@
+uuid: 35f02b25-8433-4b1c-9169-005a556f6fb8
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - macustom
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: macustom_powered
+theme: macustom
+region: footer_fifth
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

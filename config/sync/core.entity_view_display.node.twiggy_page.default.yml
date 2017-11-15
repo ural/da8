@@ -1,0 +1,40 @@
+uuid: f73169c1-f495-4b8c-9ca5-136f211b1523
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.twiggy_page.body
+    - field.field.node.twiggy_page.field_twiggypic
+    - node.type.twiggy_page
+    - responsive_image.styles.macustomthemebreaks
+  module:
+    - responsive_image
+    - text
+    - user
+id: node.twiggy_page.default
+targetEntityType: node
+bundle: twiggy_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_twiggypic:
+    weight: 1
+    label: hidden
+    settings:
+      responsive_image_style: macustomthemebreaks
+      image_link: content
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
