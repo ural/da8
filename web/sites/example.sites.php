@@ -1,7 +1,5 @@
 <?php
 
-// @codingStandardsIgnoreFile
-
 /**
  * @file
  * Configuration file for multi-site support and directory aliasing feature.
@@ -26,9 +24,9 @@
  * example, to map https://www.drupal.org:8080/mysite/test to the configuration
  * directory sites/example.com, the array should be defined as:
  * @code
- * $sites = [
+ * $sites = array(
  *   '8080.www.drupal.org.mysite.test' => 'example.com',
- * ];
+ * );
  * @endcode
  * The URL, https://www.drupal.org:8080/mysite/test/, could be a symbolic link
  * or an Apache Alias directive that points to the Drupal root containing
