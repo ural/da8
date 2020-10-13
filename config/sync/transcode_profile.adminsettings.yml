@@ -1,4 +1,4 @@
-profile_name: '1920X1080 h264'
+profile_id: high_quality
 enable_transcoding: 1
 _core:
-  default_config_hash: bugqcDStvRv-O1tgjw16YwkkgnXEmjByfMtihy_5HXs
+  default_config_hash: '-yeoi_iz5jaestJr4DdO0MSYGP-Cc-KlDoUcW9KBtFI'

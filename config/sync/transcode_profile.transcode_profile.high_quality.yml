@@ -1,0 +1,9 @@
+uuid: 14eb2026-d055-48ec-8838-5036a19a7ba1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: PGrqMCFs6t-Xg0x6JZNIsbfspKHJhVlcinYPbsUMXn8
+id: high_quality
+label: 'High quality'
+codec: x265

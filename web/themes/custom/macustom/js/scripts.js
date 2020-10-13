@@ -12,13 +12,3 @@
   };
 })(jQuery);
 
-
-/*
-Drupal.behaviors.testFunc = {
-  attach: function(context) {
-
-  alert("WOWSER");
-
-  }
-}
-*/

@@ -1,5 +1,26 @@
-.site-branding__text a, .site-branding a {
-  color: #042036;
+@media all and (min-width: 64em) {
+
+  .region-header .site-branding__text a,
+  .region-header .site-branding__text a h1,
+  .site-branding a {
+    font-weight: 900;
+    font-size: 38px;
+  }
+
+}
+
+.emily-class {
   font-weight: 900;
-  font-size: 38px;
+}
+
+
+.region-header .site-branding__text a,
+.region-header .site-branding__text a h1,
+.site-branding a {
+  color: #226f79;
+  margin: 0;
+}
+
+.site-branding__slogan {
+  text-shadow: #081e33 0 0 8px;
 }
