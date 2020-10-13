@@ -77,7 +77,7 @@
     'clearfix',
   ]
 %}
-{{ attach_library('classy/node') }}
+{#{{ attach_library('classy/node') }}#}
 <article{{ attributes.addClass(classes) }}>
   <header>
     {{ title_prefix }}
@@ -98,31 +98,8 @@
     {% endif %}
   </header>
 
-  <div class="dumpster">
-    {{ kint(node.id) }}
-    <h1>
-      {{ label }}
-    </h1>
-
-    {% if not user.isAnonymous %}
-    <div class="printout" style="background: #000; color:#f00;">{{ author_name }} NOT ANONYMOUS <br />
-    </div>
-    {% endif %}
-  </div>
-
-  <div class="test-message" style="background: #f90; color: #fff;">
-  {% if view_mode == 'full' %}
-    {% trans %}
-    Report any problems with this page to ADMIN
-    {% endtrans %}
-  {% endif %}
-  </div>
-
-  <div class="output_custom_var">
-    {{ custom_var }}
-  </div>
-
-  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+  <div{{ content_attributes.addClass('node__content', 'clearfix') }} {{ content_attributes.removeAttribute('id') }}>
     {{ content }}
   </div>
 </article>
+

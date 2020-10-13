@@ -1,0 +1,42 @@
+uuid: adc929f0-2a72-427d-8d4e-f76182d1d1f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.max_1300x1300
+    - image.style.max_325x325
+    - image.style.max_650x650
+    - image.style.medium
+  theme:
+    - macustom
+id: macustomthemebreaks
+label: MaCustomThemeBreaks
+image_style_mappings:
+  -
+    breakpoint_id: macustom.layout.narrow
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - max_325x325
+  -
+    breakpoint_id: macustom.layout.wide
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '100vw, (min-width:700px) 700px'
+      sizes_image_styles:
+        - max_1300x1300
+        - max_650x650
+  -
+    breakpoint_id: macustom.layout.mobile
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(min-width: 320px) calc(100vw/2),  (max-width: 812px) 325px'
+      sizes_image_styles:
+        - max_325x325
+        - medium
+breakpoint_group: 'Macustom Breaks'
+fallback_image_style: medium

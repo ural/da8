@@ -1,0 +1,9 @@
+uuid: cf49719b-1aea-4830-8fff-b9f5872b3bda
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 4mDYY2AVqEK8SvgYeGby9lkD1wLb3QkiDfw6d9HXdIY
+id: medium_quality
+label: 'Medium quality'
+codec: x264

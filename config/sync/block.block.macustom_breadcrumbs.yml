@@ -1,0 +1,22 @@
+uuid: da6e27dc-827f-4cff-8a83-93bf6b59fd4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - macustom
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: macustom_breadcrumbs
+theme: macustom
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
